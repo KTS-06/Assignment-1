@@ -68,9 +68,7 @@ buttonGetSuggestion.setOnClickListener {
           "dinner"->"Call a friend or relative for a 5-minute catch-up."
           "after dinner","night"->"Leave a thoughtful comment on a friend's post."
           else -> ""//Return empty if invalid input
-
-        }
-      
+		  
   Activity_main.xml
   
   <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#2196F3" tools:context=".MainActivity">
