@@ -73,76 +73,14 @@ buttonGetSuggestion.setOnClickListener {
       
   Activity_main.xml
   
-        <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#E41111"
-    tools:context=".MainActivity">
+  <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#2196F3" tools:context=".MainActivity">
+<EditText android:id="@+id/editTextTimeOfDay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="10" android:inputType="text" android:text="Name" app:layout_constraintBottom_toTopOf="@+id/textViewSuggestion" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
 
-    <EditText
-        android:id="@+id/editTextTimeOfDay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/textViewSuggestion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+<TextView android:id="@+id/textViewSuggestion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Display" android:textSize="34sp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.501" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.518" tools:text="Display"/>
 
-    <TextView
-        android:id="@+id/textViewSuggestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Display"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Display" />
+<ImageView android:id="@+id/imageView" android:layout_width="261dp" android:layout_height="264dp" app:layout_constraintBottom_toTopOf="@+id/editTextTimeOfDay" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/dayyime"/>
 
-    <Button
-        android:id="@+id/buttonReset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:allowUndo="true"
-        android:background="#E7D8D8"
-        android:text="Reset"
-        android:textColorLink="#F38C2727"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonGetSuggestion"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSuggestion" />
+<Button android:id="@+id/buttonReset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="135dp" android:layout_marginTop="212dp" android:layout_marginEnd="96dp" android:layout_marginBottom="116dp" android:text="Reset" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@+id/buttonGetSuggestion" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/editTextTimeOfDay"/>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTimeOfDay"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.414"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_1" />
-
-    <Button
-        android:id="@+id/buttonGetSuggestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:allowUndo="true"
-        android:background="#FF0000"
-        android:text="Submit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonReset"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSuggestion" />
-
+<Button android:id="@+id/buttonGetSuggestion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="96dp" android:layout_marginTop="212dp" android:layout_marginEnd="135dp" android:layout_marginBottom="116dp" android:text="Submit" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/buttonReset" app:layout_constraintTop_toBottomOf="@+id/editTextTimeOfDay"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
-    }
-}
