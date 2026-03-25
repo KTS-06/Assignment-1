@@ -1,5 +1,7 @@
 # Assignment-1
-MainActivity.kt 
+Repo for Assignment 1 submissions
+
+MainActivity.kt
 
 @file:Suppress("unused")
 
@@ -61,21 +63,92 @@ buttonGetSuggestion.setOnClickListener {
     //Function to get suggestion based on input time of day
     private fun getSocialSparkSuggestion(timeOfDay: String): String {
         return when (timeOfDay) {
-          "morning"->"Send a'Good morning text to a family member."
-          "mid-morning"->"Reach out to a colleague with quick'Thank you.'"
+          "morning"->"Send a'Good morning' text to a family member."
+          "mid-morning"->"Reach out to a colleague with quick 'Thank you.'"
           "afternoon"->"Share a funny meme or interesting link with a friend."
           "afternoon snack time"->"Send a quick 'thinking of you' message."
           "dinner"->"Call a friend or relative for a 5-minute catch-up."
           "after dinner","night"->"Leave a thoughtful comment on a friend's post."
           else -> ""//Return empty if invalid input
-		  
-  Activity_main.xml
-  
-  <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#2196F3" tools:context=".MainActivity">
-<EditText android:id="@+id/editTextTimeOfDay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="10" android:inputType="text" android:text="Name" app:layout_constraintBottom_toTopOf="@+id/textViewSuggestion" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
-<TextView android:id="@+id/textViewSuggestion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Display" android:textSize="34sp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.501" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.518" tools:text="Display"/>
-<ImageView android:id="@+id/imageView" android:layout_width="261dp" android:layout_height="264dp" app:layout_constraintBottom_toTopOf="@+id/editTextTimeOfDay" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/dayyime"/>
-<Button android:id="@+id/buttonReset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="135dp" android:layout_marginTop="212dp" android:layout_marginEnd="96dp" android:layout_marginBottom="116dp" android:text="Reset" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@+id/buttonGetSuggestion" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/editTextTimeOfDay"/>
 
-<Button android:id="@+id/buttonGetSuggestion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="96dp" android:layout_marginTop="212dp" android:layout_marginEnd="135dp" android:layout_marginBottom="116dp" android:text="Submit" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/buttonReset" app:layout_constraintTop_toBottomOf="@+id/editTextTimeOfDay"/>
+        }
+    }
+}
+
+Activity_main.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2196F3"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextTimeOfDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSuggestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSuggestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display"
+        android:textColor="#673AB7"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.518"
+        tools:text="Display" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="261dp"
+        android:layout_height="264dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTimeOfDay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dayyime" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="116dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGetSuggestion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTimeOfDay" />
+
+    <Button
+        android:id="@+id/buttonGetSuggestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="116dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonReset"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTimeOfDay" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
